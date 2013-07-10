@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<table><tr>
+    <td><div id="clientform" class="client-form">
+        @{Html.RenderAction("Create", "Home");}
+    </div></td>
+    <td><div id="bidslist" class="bid-tables">
+        @{Html.RenderAction("BidsList", "Home");}
+    </div></td>
+</tr></table>
+

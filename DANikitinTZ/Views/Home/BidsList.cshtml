@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DANikitinTZ.Models.Bid>
+<p>@GlobalRes.BidsList</p>
+<table>
+    <tr>
+        <th>
+            @GlobalRes.BidClientName
+        </th>
+        <th>
+            @GlobalRes.BidDateBid
+        </th>
+        <th>
+            @GlobalRes.BidNumberPersons
+        </th>
+        <th>
+            @GlobalRes.BidComment
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberPersons)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>
+       
+    </tr>
+}
+</table>
